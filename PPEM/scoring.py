@@ -2,6 +2,19 @@ import pandas as pd
 import numpy as np
 
 def fold_scores_summary(fold_scores, score_names):
+    """ 
+    Summarizes the scores from a folded curve inspection in 
+    a DataFrame format
+    
+    Parameters
+    ---------
+    fold_scores: pandas DataFrame
+        DataFrame containing the scores of the period estimation
+        of a class using multiple methods 
+
+    score_names: string python list 
+        List of the criteria names used for scoring
+    """    
     score_df = pd.DataFrame(index=range(len(score_names)+2),
                             columns=fold_scores.columns)
     scores = []
@@ -21,6 +34,23 @@ def fold_scores_summary(fold_scores, score_names):
 
 
 def summary_source(classes_fold_score_list, classes_periods, classes):
+    """ 
+    Summarizes the scores of multiple classes from the folded curves 
+    inspection in a DataFrame format considering only the data from the 
+    catalogs
+    
+    Parameters
+    ---------
+    classes_fold_score_list: pandas DataFrame python list
+        List of DataFrames containing the scores of the period estimation
+        of multiple classes
+
+    classes_periods: pandas DataFrame python list 
+        List of DataFrames containing the catalog's periods
+
+    classes: string python list
+        List of the names of the classes to be considered
+    """        
     scores = []
     for idx in range(len(classes_periods)):
         temp = pd.concat([classes_fold_score_list[idx], classes_periods[idx].source], axis=1)
@@ -38,6 +68,16 @@ def summary_source(classes_fold_score_list, classes_periods, classes):
 
 
 def summary_scores(fold_scores_list):
+    """ 
+    Summarizes the scores from multiple folded curves inspection in 
+    a DataFrame format for a single class.
+    
+    Parameters
+    ---------
+    fold_scores_list: pandas DataFrame python list
+        List of DataFrames containing the scores of the period estimation
+        of a single class with different number of samples being used
+    """        
     d = {}
     nulls = {}
     for idx, score in enumerate(fold_scores_list):

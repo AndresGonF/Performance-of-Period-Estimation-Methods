@@ -5,10 +5,35 @@ import pandas as pd
 class postgreSQL_database:
 
 	def __init__(self, credentials):
+	    """
+	    Class for creating the pipeline to the ALeRCE database to be used
+	    for querying the data
+	    
+	    Parameters
+	    ---------
+	    credentials: dictionary
+	    	{'user':'xxxxxxxxxx',
+              'password':'xxxxxxxx',
+              'host':'xx.xxx.xx.xx',
+              'port':'xxxx',
+              'database':'xxx'}
+            Dictionary with the credentials of the database to be used
+	    """		
+
 		self.credentials = credentials
 
 
 	def query(self, object_id):
+	    """
+	    Method for querying the data of a determined object from
+	    the database
+
+	    Parameters
+	    ---------
+
+		object_id: string
+			oid of the object to be queried
+	    """				
 	    try:
 	        connection = psycopg2.connect(**self.credentials)
 

@@ -6,6 +6,34 @@ import tqdm
 
 
 def get_period(method, mjd, mag, error, fids=None):
+    """ 
+    Computes the period from the periodogram created with the
+    input data using one of the methods from P4J
+    
+    Parameters
+    ---------
+    method: {'PDM1', 'LKSL', 'AOV', 'MHAOV', 'QMICS', 'QMIEU'} 
+        Method used to perform the fit
+        
+        PDM: Phase Dispersion Minimization
+        LKSL: Lafler Kinman statistic for string length
+        AOV: Analysis of Variance Periodo
+        MHAOV: Orthogonal multiharmonic AoV
+        QMICS: Cauchy Schwarz Quadratic Mutual Information
+        QMIEU: Euclidean Quadratic Mutual Information    
+
+    mjd: float python list
+        Modified julian date (time instants)
+
+    mag: float python list
+        Stellar magnitude 
+
+    err: float python list
+        Photometric error
+
+    fids: int python list
+        Band identifier
+    """
     if fids != None:
         my_per = P4J.MultiBandPeriodogram(method=method)
         my_per.set_data(mjd, mag, error, fids)
@@ -24,6 +52,32 @@ def get_period(method, mjd, mag, error, fids=None):
 
 
 def object_estimation(obj, method, n_samples=None, multiband=False):
+    """ 
+    Computes the period of an object using one of the methods from P4J
+    
+    Parameters
+    ---------
+    obj: pandas DataFrame
+        DataFrame containing the detection data of a determined
+        object
+
+    method: {'PDM1', 'LKSL', 'AOV', 'MHAOV', 'QMICS', 'QMIEU'} 
+        Method used to perform the fit
+        
+        PDM: Phase Dispersion Minimization
+        LKSL: Lafler Kinman statistic for string length
+        AOV: Analysis of Variance Periodo
+        MHAOV: Orthogonal multiharmonic AoV
+        QMICS: Cauchy Schwarz Quadratic Mutual Information
+        QMIEU: Euclidean Quadratic Mutual Information    
+
+    n_samples: positive integer
+        Number of samples to be used for the period estimation
+
+    multiband: boolean
+        Condition to choose if the period estimation will consider
+        the bands seperatly (single band) or all together (multi band)
+    """    
     obj_g = obj[obj["fid"] == 1]
     obj_r = obj[obj["fid"] == 2]
     if n_samples != None:
@@ -63,6 +117,32 @@ def object_estimation(obj, method, n_samples=None, multiband=False):
     return [obj_g.shape[0], obj_r.shape[0]] + comp_time + fbest
 
 def multi_object_estimation(objs_df, method, n_samples=None, multiband=False):
+    """ 
+    Computes the period of multiple objects using one of the methods from P4J
+    
+    Parameters
+    ---------
+    objs_df: pandas DataFrame
+        DataFrame containing the detection data of multiple
+        objects
+
+    method: {'PDM1', 'LKSL', 'AOV', 'MHAOV', 'QMICS', 'QMIEU'} 
+        Method used to perform the fit
+        
+        PDM: Phase Dispersion Minimization
+        LKSL: Lafler Kinman statistic for string length
+        AOV: Analysis of Variance Periodo
+        MHAOV: Orthogonal multiharmonic AoV
+        QMICS: Cauchy Schwarz Quadratic Mutual Information
+        QMIEU: Euclidean Quadratic Mutual Information    
+
+    n_samples: positive integer
+        Number of samples to be used for the period estimation
+
+    multiband: boolean
+        Condition to choose if the period estimation will consider
+        the bands seperatly (single band) or all together (multi band)
+    """    
     period_list = []
     objs_oid = objs_df.index.unique()
     with tqdm.tqdm(total=len(objs_oid)) as pbar:
