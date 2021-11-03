@@ -16,7 +16,7 @@ Contents
     2.2. Object selection\
     2.3. Period estimation\
     2.4. Folde curve scoring
-3. Analysis and resultsResultados y análisis
+3. Analysis and results\
     3.1. Catálogo\
     3.2. Hit-rate\
     3.3. Computing time
