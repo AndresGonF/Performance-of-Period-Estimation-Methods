@@ -27,7 +27,7 @@ Dependencies::
     Matplotlib
 
 
-Install by cloning this github and do::
+Install by cloning this github and do:
 
     python setup.py install --user
 
