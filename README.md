@@ -1,57 +1,62 @@
 PPEM
-==============================
+===
 
-An study of the performance of multiple period estimation methods
+Description
+-----------
 
-Project Organization
-------------
-
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+PPEM is a project for a guided work from Universidad de Chile. The main focus of this work is to analyze the performance of the period estimation methods currently available at the P4J package (https://github.com/phuijse/P4J). These methods are used by ALeRCE, specifically with variable stars and periods. There are multiple methods for the estimation of these periods, among which MHAOV is the one that's used most because of it's good performance. However, there are other methods implemented on this library and although there's evidence to prefer the MHAOV method, an exhaustive analysis has'nt been carried out taking into account the folded curves with the estimated periods. Then, for this work it'll be studied the performance of each one of the methods for different classess (RRL, Ceph, LPV ,DSCT, EB/EW) and using different number of detections for the estimations, in addition to also analyzing the current labels that are available.
 
 
+Contents
 --------
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+-  Quadratic Mutual Information periodogram for light curves 
+-  Phase Dispersion Minimization, String Length, and Analysis of variance periodograms.
+-  Basic synthetic light curve generator
+
+Instalation
+-----------
+
+Dependencies::
+
+    P4J
+    Numpy
+    GCC
+    Cython (optional)
+    Pandas
+    Matplotlib
+
+
+Install by cloning this github and do::
+
+    python setup.py install --user
+
+Report
+-------
+
+Please review
+
+    https://github.com/AndresGonF/Performance-of-Period-Estimation-Methods/blob/main/reports/Informe_Trabajo_Dirigido.pdf
+    
+    
+Process
+-------
+
+Please review
+
+    https://github.com/AndresGonF/Performance-of-Period-Estimation-Methods/blob/main/notebooks/Trabajo%20dirigido%20-%20Desempe%C3%B1o%20m%C3%A9todos.ipynb
+
+
+Authors
+-------
+
+-  Andrés González
+-  Pablo A. Estévez (tutor)
+-  Ignacio Reyes (tutor)
+
+References
+----------
+1. M. Catelan, H. Smith ``Pulsating Stars''. Weinheim Germany: Wiley-VCH, 2015.
+2. P. Huijse et al ``Robust Period Estimation Using Mutual Information for Multiband Light Curves in the Synoptic Survey Era'' in ApJS, 2018, 236 12.
+3. N. Mondrik et al ``A MULTIBAND GENERALIZATION OF THE MULTIHARMONIC ANALYSIS OF VARIANCE PERIOD ESTIMATION ALGORITHM AND THE EFFECT OF INTER-BAND OBSERVING CADENCE ON PERIOD RECOVERY RATE'' in ApJL, 2015, 811 L34.
+4. P. Huijse, P. Protopapas, P. Estévez, P. Zegers, J. Príncipes, ``P4J'', 2016.
