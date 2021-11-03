@@ -1,0 +1,172 @@
+\newpage
+\section{Resultados y análisis}
+
+    \subsection{Catálogo}
+    
+    A partir de la evaluación de las curvas dobladas de las etiquetas se puede realizar un análisis en base a las clases que contiene (Tabla \ref{tab:catClass}) y al catálogo al que pertenecen (Tabla \ref{tab:catCat}). Este último fue obtenido promediando el hitrate entre cada clase para un catálogo determinado
+	\begin{multicols}{2}
+
+	\begin{table}
+		\centering
+		\caption{Resumen de etiquetas por clases.}
+		\begin{tabular}{cc}
+			\hline
+			\textbf{Clase}      & \textbf{[\%] de acierto} \bigstrut\\
+			\hline
+			\textbf{RLL}        & 0.99 \bigstrut[t]\\
+			\textbf{Cefeidas}   & 0.82 \\
+			\textbf{LPV}        & 0.80  \\
+			\textbf{DSCT}       & 0.89 \\
+			\textbf{EB}         & 0.87 \bigstrut[b] \\
+			\hline
+		\end{tabular}
+		\label{tab:catClass}
+	\end{table}
+	
+		\begin{table}
+		\centering
+		\caption{Resumen de etiquetas por catálogo}
+		\begin{tabular}{cc}
+			\hline
+			\textbf{Clase}      & \textbf{[\%] de acierto} \bigstrut\\
+			\hline
+			\textbf{CRTSnorth}  & 0.94 \bigstrut[t]\\
+			\textbf{GAIADR2VS}  & 0.87 \\
+			\textbf{ASASSN}     & 0.89 \\
+			\textbf{LINEAR}     & 0.76 \\
+			\textbf{CRTSsouth}  & 1.00 \bigstrut[b] \\
+			\hline
+		\end{tabular}
+		\label{tab:catCat}
+	\end{table}
+	\end{multicols}    
+	
+	De las Tablas \ref{tab:catClass} y \ref{tab:catCat} se puede ver que en general, los períodos de las etiquetas sirven al menos para el 80\% de cada clase, y los catálogos tienen buena representatividad, con excepción de LINEAR que solo llega al 76\%.	Esto último se debe intrínsecamente a que Cefeidas y LPV solo tienen dos objetos de este catálogo dentro de los datos utilizados, de los cuales uno tiene un período incorrecto, lo que disminuye a la mitad el hit rate y provoca la baja al calcular el promedio entre clase.
+
+\newpage
+    \subsection{Hit-rate}
+        \subsubsection{RRL}
+    	\insertimage[\label{img:hitrateRRL}]{hitrate/RRL_hitrate4.png}{scale=0.35}{Comparación de hit rate de cada método entre bandas g, r y multibanda MHAOV para RRL.}
+    	
+    	\begin{itemize}
+    	    \item \textbf{Single band:} De los hit-rate en la Figura \ref{img:hitrateRRL} se tiene que para una sola banda, la forma de la curva es similar entre las bandas g y r. Además, se ve que algunos métodos tienen desempeños similares entre ellos, como QME y QMIEU, y LS con MHAOV (casi idénticos). Se observa que la mejora en hit-rate comienza a detenerse desde las 40 muestras y en términos de desempeño general, la banda g es mejor respecto a la banda r. Se destaca que LKSL y PDM1 son notablemente inferiores al resto de los métodos.
+    	    
+    	    \item \textbf{Multi band:} Observando el hit-rate en multibanda de la Figura \ref{img:hitrateRRL}, lo primero que se puede notar es que ya inicialmente con 10 muestras, el desempeño es mejor en que single band y luego ya con solo 20 muestras se alcanza un hit-rate de 0.78. También se puede hacer la diferencia respecto al single band, que ahora las mejoras con mayor número de muestras comienza a descender desde las 30 muestras en vez de 40. Finalmente, se observa que el hit-rate final es similar al alcanzado por los métodos cuadráticos en la banda g.
+    	\end{itemize}
+    	
+	    \subsubsection{Cefeidas}
+    	\insertimage[\label{img:hitrateCeph}]{hitrate/Ceph_hitrate4.png}{scale=0.35}{Comparación de hit rate de cada método entre bandas g, r y multibanda MHAOV para Cefeidas.}
+    	
+    	\begin{itemize}
+    	    \item \textbf{Single band:} De los hit-rate en la Figura \ref{img:hitrateCeph} se tiene que para una sola banda, la forma de la curva es similar entre las bandas g y r. Inicialmente se tiene un hit-rate de 0.20 para algunos métodos. La diferencia en desempeño entre cada método es menor respecto a las vistas para RRL, estos es, las curvas de cada método están mas juntas entre sí. Para la banda g se tiene un desempeño ligeramente mayor a la banda r, y al final con 50 muestras se puede ver esto con mayor facilidad. En este punto, todos los métodos para la banda g parecen converger al mismo hit-rate, que es superior al alcanzado por los métodos en la banda r, en donde además éstos se encuentran más separados a diferencia de la banda g. Finalmente se destaca que la diferencia entre métodos disminuye a mayor número de muestras y que las curvas para las cefeidas tienen mayor pendiente de mejora que para las RRL.
+    	    
+    	    \item \textbf{Multi band:} Observando el hit-rate en multibanda de la Figura \ref{img:hitrateCeph}, se tiene un desempeño inicial de 0.6 para 10 muestras y sobre 0.8 desde las 20 muestras. Luego de esto, el desempeño va mejorando con un comportamiento aparentemente lineal desde las 30 muestras, para así llegar con un hit-rate bastante cercano a 1.0 para las 50 muestras.
+    	\end{itemize}
+    	
+	    \subsubsection{LPV}
+    	\insertimage[\label{img:hitrateLPV}]{hitrate/LPV_hitrate4.png}{scale=0.35}{Comparación de hit rate de cada método entre bandas g, r y multibanda MHAOV para LPV.}
+    	
+
+    	\begin{itemize}
+    	    \item \textbf{Single band:} De los hit-rate en la Figura \ref{img:hitrateLPV}, se tiene que a diferencia de las RRL y cefeidas, existen diferencias notables entre la mayoría de los métodos y ya no se comparte la misma forma de la curva, salvo para los pares LS - MHAOV y QME - QMIEU que se comportan de manera similar solo entre sí. Luego, se tiene que ahora no son los métodos cuadráticos los que introducen la mayor mejora en hit-rate, sino que son los métodos de primero orden, en donde LS y MHAOV son quienes tienen el mejor desempeño. También se puede notar que la banda r tiene un mejor desempeño que la banda g. El máximo hit-rate alcanzado es un poco inferior a 0.8.
+    	    
+    	    \item \textbf{Multi band:}  Observando el hit-rate en multibanda de la Figura \ref{img:hitrateLPV}, se encuentra una mejora notable respecto a los métodos en single band, en donde con solo 10 muestras se tiene un hit-rate superior a 0.5. Luego, se puede notar que rápidamente el método llega a una cota de aproximadamente 0.8 desde las 20 muestras, con un desempeño final con una leve mejora respecto al mejor hit-rate en la banda r.
+    	\end{itemize}
+    	
+
+	    \subsubsection{DSCT}
+    	\insertimage[\label{img:hitrateDSCT}]{hitrate/DSCT_hitrate4.png}{scale=0.35}{Comparación de hit rate de cada método entre bandas g, r y multibanda MHAOV para DSCT.}
+    	
+    	\begin{itemize}
+    	    \item \textbf{Single band:} De los hit-rate en la Figura \ref{img:hitrateDSCT}, lo primero que se puede notar es que el hit-rate va mejorando de una forma aproximadamente lineal para todos los métodos, exceptuando LKSL y PDM1, en donde tanto para banda g como para la banda r aparentemente se alcanza una cota cerca de 0.2. En general, se tiene que el desempeño va aumentando lentamente a mayor número de muestras y para las 50 muestras, no se observa ninguna cota y llega hasta los 0.6. Esto indica que el hit-rate podría seguir mejorando con un mayor número de muestras para la estimación del período, salvo para LKSL y PDM1. Finalmente, los mejores resultados se dan utilizando los métodos cuadráticos y no parece haber una mejora en desempeño entre una banda y la otra.
+    	    
+    	    \item \textbf{Multi band:}  Observando el hit-rate en multibanda de la Figura \ref{img:hitrateDSCT}, se tiene una mejora inicial a las 10 muestras que es inferior a la vista para las otras clases. Luego, se observa una rápida mejora en desempeño hasta las 30 muestras, momento en la que esta mejora se vuelva más lenta. Finalmente, llegando a las 50 muestras se tiene un hit-rate final que no supera los 0.6 y que no supera el mejor hit-rate en single band, sin embargo, se ve que este puede seguir mejorando pero con un ritmo más lento que para single band.
+    	\end{itemize}    	
+
+
+
+
+
+        \subsubsection{EB}
+    	\insertimage[\label{img:hitrateEB}]{hitrate/EB_hitrate4.png}{scale=0.35}{Comparación de hit rate de cada método entre bandas g, r y multibanda MHAOV para EB.}
+    	
+    	Observando los hit-rate para la clase EB en la Figura \ref{img:hitrateEB}, se puede ver utilizando una sola banda, los únicos métodos que logran tener un hit-rate superior a 0.2 son LKSL y PDM1. El resto de los métodos tienen un desempeño casi nulo y para el caso multibanda, este es completamente nulo.\\
+    	
+    	Debido a la particularidad que tiene la clase EB en su estimación de período es que se incluyó un tipo de error distinto que aplica solo para esta clase, que es cuando la mitad del período es estimada. El hit-rate medido tomando en cuenta las estimaciones con este error se puede ver en la Figura \ref{img:hitrateEB_half}.
+    	
+    	\insertimage[\label{img:hitrateEB_half}]{hitrate/EB_hitrate4_half.png}{scale=0.35}{Comparación de hit rate medido con el error ``half'' de cada método entre bandas g, r y multibanda MHAOV para EB.}  
+    	
+    	\begin{itemize}
+    	    \item \textbf{Single band:} De los hit-rate en la Figura \ref{img:hitrateEB_half}, teniendo de referencia el error de la mitad del período, se puede ver que en general no hay una banda mejor que la otra en desempeño. Luego, en ambas bandas se ve que los métodos LKSL y PDM1 presentan un menor hit-rate que el resto de los métods que son similares entre ellos. Para el caso de la banda g, los métodos (exceptuando LKSL y PDM1) convergen a las 30 muestras en un mismo hit-rate para luego ir mejorando de manera aparentemente lineal y de entre estos métodos, QME presenta una ligera mejora con una mayor pendiente. Para el caso de la banda r, los métodos (exceptuando LKSL y PDM1) no convergen en ningún momento pero durante la mayor parte del tiempo se encuentran poco separados entre sí. Finalmente se observa que el desempeño puede seguir mejorando más lentamente con un mayor número de muestras.
+    	    
+    	    \item \textbf{Multi band:}  Observando el hit-rate en multibanda de la Figura \ref{img:hitrateEB_half}, se tiene un desempeño inicial de casi 0.3, mejorando respecto al caso single band. Luego, para la mayoría de las distintas cantidades de muestras el desempeño en multi band es superior al caso single band, hasta las 50 muestras en donde él desempeño es similar al mejor hit-rate en la banda g.
+    	\end{itemize}    	
+    	
+    	\insertimage[\label{img:hitrateEB_ok_half}]{hitrate/EB_hitrate4_ok_half.png}{scale=0.35}{Comparación de hit rate medido con la suma entre estimaciones correctas y con error ``half'', de cada método entre bandas g, r y multibanda MHAOV para EB.}
+    	
+    	\begin{itemize}
+    	    \item \textbf{Single band:} De los hit-rate en la Figura \ref{img:hitrateEB_ok_half}, se puede ver que hasta las 20 muestras, no se introducen mejoras al considerar estimaciones correctas y con la mitad del período. Sin embargo, a partir de las 30 muestras si existen notables mejoras para los métodos LKSL y PDM1, en donde rápidamente su hit-rate sube hasta llegar a valores levemente superiores a 0.6 para las 50 muestras, convirtiéndose en los mejores métodos de estimación para esta clase. Para el resto de los métodos no existen grandes cambios.
+    	    
+    	    \item \textbf{Multi band:}  Observando el hit-rate en multibanda de la Figura \ref{img:hitrateEB_ok_half}, no hay cambio alguno al considerar tanto el error con la mitad del período y los períodos correctos. Esto se debe a que el hit-rate con el período correcto es totalmente nulo. Además, el hit-rate final es inferior al alcanzado por la banda r en single band que supera los 0.6.
+    	\end{itemize}    	
+    	
+    	
+    	
+\newpage
+	\subsection{Tiempo de cómputo}
+	
+    De las Figuras \ref{img:timeRRL}, \ref{img:timeCeph}, \ref{img:timeLPV}, \ref{img:timeDSCT} y \ref{img:timeEB} se puede ver como varía el tiempo de cómputo con el número de muestras entre los distintos métodos. Dado que los resultados en general son bastantes similares entre las clases, se muestran todos estos en listado para dar con un análisis general posteriormente.
+    
+    % \subsubsection{RRL}
+    	\insertimage[\label{img:timeRRL}]{time/RRL_time3.png}{scale=0.3}{Comparación de tiempo de cómputo de cada método entre bandas g, r y multibanda MHAOV para RRL.}
+    	
+    % 	De los tiempos de cómputo en escala logarítmica en la Figura \ref{img:timeRRL}, se tiene que entre ambas bandas no hay diferencias. Los métodos cuadráticos rápidamente crecen en tiempo de cómputo con una mayor pendiente que los métodos de primer órden, debido a la complejidad cuadrática. Para el caso multibanda se tiene un tiempo intermedio entre los métodos cuadráticos y de primer orden, y una curva que parece presentar una cota a mayor número de muestras.
+	
+    	
+    % 	\subsubsection{Cefeidas}
+		\insertimage[\label{img:timeCeph}]{time/Ceph_time3.png}{scale=0.3}{Comparación de tiempo de cómputo de cada método entre bandas g, r y multibanda MHAOV para Cefeidas.}
+		
+    % 	De los tiempos de cómputo en escala logarítmica en la Figura \ref{img:timeCeph}, se tiene que entre ambas bandas no hay diferencias. Los métodos cuadráticos rápidamente crecen en tiempo de cómputo con una mayor pendiente que los métodos de primer órden, debido a la complejidad cuadrática. Para el caso multibanda se tiene un tiempo intermedio entre los métodos cuadráticos y de primer orden, y una curva que parece presentar una cota a mayor número de muestras.		
+		
+    	
+    % 	\subsubsection{LPV}
+    	\insertimage[\label{img:timeLPV}]{time/LPV_time3.png}{scale=0.3}{Comparación de tiempo de cómputo de cada método entre bandas g, r y multibanda MHAOV para LPV.}	
+    	
+    % 	De los tiempos de cómputo en escala logarítmica en la Figura \ref{img:timeLPV}, se tiene que entre ambas bandas no hay diferencias. Los métodos cuadráticos rápidamente crecen en tiempo de cómputo con una mayor pendiente que los métodos de primer órden, debido a la complejidad cuadrática. Para el caso multibanda se tiene un tiempo intermedio entre los métodos cuadráticos y de primer orden, y una curva que parece presentar una cota a mayor número de muestras.		
+    	
+    	
+    	
+    % 	\subsubsection{DSCT}
+        \insertimage[\label{img:timeDSCT}]{time/DSCT_time3.png}{scale=0.3}{Comparación de tiempo de cómputo de cada método entre bandas g, r y multibanda MHAOV para DSCT.}	
+        
+    % 	De los tiempos de cómputo en escala logarítmica en la Figura \ref{img:timeDSCT}, se tiene que entre ambas bandas no hay diferencias. Los métodos cuadráticos rápidamente crecen en tiempo de cómputo con una mayor pendiente que los métodos de primer órden, debido a la complejidad cuadrática. Para el caso multibanda se tiene un tiempo intermedio entre los métodos cuadráticos y de primer orden, y una curva que parece presentar una cota a mayor número de muestras.		
+        
+        
+	
+	   % \subsubsection{EB}
+		\insertimage[\label{img:timeEB}]{time/EB_time3.png}{scale=0.3}{Comparación de tiempo de cómputo de cada método entre bandas g, r y multibanda MHAOV para EB.}
+		
+    % 	De los tiempos de cómputo en escala logarítmica en la Figura \ref{img:timeDSCT}, se tiene que entre ambas bandas no hay diferencias. Los métodos cuadráticos rápidamente crecen en tiempo de cómputo con una mayor pendiente que los métodos de primer órden, debido a la complejidad cuadrática. Para el caso multibanda se tiene un tiempo intermedio entre los métodos cuadráticos y de primer orden, y una curva que parece presentar una cota a mayor número de muestras.		
+    
+    
+	   % \item Tiempo inicial mayor para 10 muestras que en caso single band.
+	   % \item El tiempo de cómputo aumenta hasta llegar a una cota con N° muestras.
+    
+    \begin{itemize}
+        \item \textbf{Single band:} Para las Figuras anteriores, se puede notar que entre las distintas bandas, prácticamente no hay diferencia alguna con cualquier número de muestras. Luego, se tiene que los métodos cuadráticos presentan una mayor pendiente que aquellos métodos de primer orden y además, estos son prácticamente idénticos entre sí. También para los métodos de primer orden se observa que estos difieren levemente entre ellos, en especial entre los métodos LKSL y MHAOV que son bastante similares entre sí. Finalmente, de entre los métodos de primer orden se tiene que LS ocupa mayor tiempo de cómputo, seguido por el par LKSL - MHAOV y PDM1 siendo el más rápido de todos los métodos.
+        
+        \item \textbf{Multi band:} Observando el tiempo de cómputo en multi banda de todas las clases, se observa que el tiempo inicial para 10 muestras es mayor que en el caso de single band, y para a las 50 muestras es menor que para los métodos cuadráticos en general. Respecto a la pendiente que tiene, se nota que está en un punto intermedio entre la pendiente de los métodos cuadráticos y la de los métodos de primer orden.
+    \end{itemize}
+		
+	
+	
+	
+
+	
+
+	
+
+	
+
+	
+	

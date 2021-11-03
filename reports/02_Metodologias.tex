@@ -1,0 +1,86 @@
+\newpage
+\section{Metodología de trabajo}
+
+    \subsection{Base de datos}
+    
+    Para realizar la evaluación de desempeño de los métodos de estimación de período que utiliza, se utilizará una base de datos correspondiente a las detecciones de datos reales del observatorio Zwicky Transient Facility (ZTF). Debido a que el trabajo esta acotado solo a estrellas periódicas, se seleccionarán solo a aquellas que lo sean y de estas, se utilizarán las etiquetas disponibles de diversos catálogos que las categoriza en alguna de las clases mencionadas en la sección anterior y que cuentan con sus propios períodos, los cuales también será evaluados. La distribución de clases y los catálogos utilizados se presentan resumidos en la Tabla \ref{tab:nClases} y la Tabla \ref{tab:nCata}, respectivamente.\\
+    
+    \begin{multicols}{2}
+    \centering
+        \begin{tabular}{lr}
+        \toprule
+        {} &  \textbf{classALeRCE} \\
+        \midrule
+        \textbf{EB/EW         } &        47541 \\
+        \textbf{RRL           } &        21483 \\
+        \textbf{LPV           } &         5119 \\
+        \textbf{DSCT          } &         1071 \\
+        \textbf{Periodic-Other} &          867 \\
+        \textbf{Ceph          } &          786 \\
+        \bottomrule
+        \end{tabular}
+        \captionof{table}{Cantidad de objetos por clases.}
+        \label{tab:nClases}
+
+    \centering
+        \begin{tabular}{lr}
+        \toprule
+        {} &  \textbf{source} \\
+        \midrule
+        \textbf{CRTSnorth} &   46123 \\
+        \textbf{ASASSN   } &   13668 \\
+        \textbf{GAIADR2VS} &    8140 \\
+        \textbf{CRTSsouth} &    5337 \\
+        \textbf{LINEAR   } &    3599 \\
+        \bottomrule
+        \end{tabular}
+        \captionof{table}{Cantidad de objetos por catálogo.}
+        \label{tab:nCata}
+    \end{multicols}
+    
+    
+    \subsection{Selección de objetos}
+    
+     De la base de datos, solo se seleccionaron 100 objetos por clase que cumplen con un mínimo de muestras en cada banda (60 en este caso) y cuyo error sea menor o igual a 1, como muestra la Tabla \ref{tab:selectedData}.
+
+    \begin{table}
+    \centering
+    \caption{Resumen de la base de datos a utilizar.}
+    \label{tab:selectedData}
+    \scalebox{0.85}{%
+        \begin{tabular}{lllll}
+        \toprule
+        {} & N° objs & N° samples & N° min-max samples (g) & N° min-max samples (r) \\
+        \midrule
+        \textbf{RRL } &     100 &      28468 &               65 - 548 &               61 - 516 \\
+        \textbf{Ceph} &     100 &      39862 &               68 - 631 &               62 - 794 \\
+        \textbf{LPV } &     100 &      39082 &               71 - 491 &               60 - 640 \\
+        \textbf{DSCT} &     100 &      28397 &               62 - 406 &               60 - 413 \\
+        \textbf{EB  } &     100 &      27581 &               60 - 476 &               61 - 690 \\
+        \bottomrule
+        \end{tabular}}
+    \end{table}
+    
+    \subsection{Estimación de períodos}
+    
+    Luego, para contar con la estimación de los períodos, se hará uso del paquete de python P4J \cite{p4j} y también astropy, a partir del cual se generarán los períodogramas de cada banda o multibanda según venga el caso. Posteriormente se estimará el mejor período con cada uno de los 6 métodos implementados en P4J y Lomb-Scargle en astropy, junto con su tiempo de cómputo, y se almacenarán en un archivo .csv para tenerlos siempre disponibles para un DataFrame.
+    
+    
+    \subsection{Calificación de curvas dobladas}
+    
+	Una vez realizadas las estimaciones de período, cada período es testeado realizando una inspección visual de las curvas dobladas (Figura \ref{img:curvaDoblaje}) para los objetos respectivos. 
+    
+	\insertimage[\label{img:curvaDoblaje}]{curvaDoblaje.PNG}{scale=0.7}{Ejemplo de curva de luz (izquierda) con su respectiva curva doblada para un período dado (derecha).}    
+    
+    Finalmente, para evaluar la curva doblada se definen una serie de criterios  a los cuales se les asignará un número para distinguirlos:
+    
+    \begin{itemize}
+        \item \textbf{Ok (1):} Se considerarán correctos (``Ok'') aquellos períodos que den una curva doblada de acuerdo a su clase (ver Anexo \ref{an:ok}).
+        
+        \item \textbf{Multiply (2 y 3 para EB):} Se considerarán como múltiplos (“Multiply”) aquellos períodos cuya curvadoblada sea un múltiplo del período real, por ejemplo cuando se ve más de unperíodo graficado (ver Anexo \ref{an:mult}).
+        
+        \item \textbf{Differs (0):} Se considerarán como erróneos (“Differs”) aquellos períodos cuya curva dobladano tenga una curva clara o no no corresponda a su clase respectiva (ver Anexo \ref{an:differs}).
+        
+        \item \textbf{Half (EB, 2):} Considerando solo binarias eclipsantes, aquellos períodos cuya curva doblada seala mitad de la curva real, serán considerados como “Half”. Se hace estadiferencia con “Multiply” por ser un error común dentro de esta clas que serepite para la mitad del período (ver Anexo \ref{an:half}).
+    \end{itemize}
+    

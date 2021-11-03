@@ -1,0 +1,82 @@
+% Template:     Informe LaTeX
+% Documento:    Archivo principal
+% Versión:      7.4.1 (01/09/2021)
+% Codificación: UTF-8
+%
+% Autor: Pablo Pizarro R.
+%        pablo@ppizarror.com
+%
+% Manual template: [https://latex.ppizarror.com/informe]
+% Licencia MIT:    [https://opensource.org/licenses/MIT]
+
+% CREACIÓN DEL DOCUMENTO
+\documentclass[letterpaper,oneside]{article}
+
+% INFORMACIÓN DEL DOCUMENTO
+\def\titulodelinforme {Informe de Trabajo Dirigido}
+\def\subtituloinforme {Desempeño de métodos para estimación de períodos}
+\def\temaatratar {Desempeño de métodos para estimación de períodos}
+
+\def\autordeldocumento {Andrés González Fuentes}
+\def\nombredelcurso {Trabajo Dirigido}
+\def\codigodelcurso {EL7850-1}
+
+\def\nombreuniversidad {Universidad de Chile}
+\def\nombrefacultad {Facultad de Ciencias Físicas y Matemáticas}
+\def\departamentouniversidad {Departamento de Ingeniería Eléctrica}
+\def\imagendepartamento {departamentos/die}
+\def\imagendepartamentoparams {height=1.57cm}
+\def\localizacionuniversidad {Santiago de Chile}
+
+% INTEGRANTES, PROFESORES Y FECHAS
+\def\tablaintegrantes {
+\begin{tabular}{ll}
+	Integrantes:
+	& \begin{tabular}[t]{l}
+		Andrés González F. \\
+	\end{tabular} \\
+	Tutores:
+	& \begin{tabular}[t]{l}
+		Pablo Estevez V. \\
+		Ignacio Reyes J.
+	\end{tabular} \\
+	\multicolumn{2}{l}{Fecha de entrega: \today} \\
+	\multicolumn{2}{l}{\localizacionuniversidad}
+\end{tabular}}{
+}
+
+% IMPORTACIÓN DEL TEMPLATE
+\input{template}
+
+% INICIO DE PÁGINAS
+\begin{document}
+	
+% PORTADA
+\templatePortrait
+
+% CONFIGURACIÓN DE PÁGINA Y ENCABEZADOS
+\templatePagecfg
+
+% RESUMEN O ABSTRACT
+% \begin{resumen}
+% 	\lipsum[1] % Párrafo ejemplo, se puede borrar
+% \end{resumen}
+
+% TABLA DE CONTENIDOS - ÍNDICE
+\templateIndex
+
+% CONFIGURACIONES FINALES
+\templateFinalcfg
+
+% ======================= INICIO DEL DOCUMENTO =======================
+
+% \input{example} % Ejemplo, se puede borrar
+\input{01_Introduccion}
+\input{02_Metodologias}
+\input{03_Resultados_y_Analisis}
+\input{04_Dificultades}
+\input{05_Conclusion}
+\input{06_Referencias}
+\input{07_Anexo}
+% FIN DEL DOCUMENTO
+\end{document}

@@ -1,0 +1,12 @@
+\newpage
+\section{Dificultades}
+
+    \begin{itemize}
+        \item Al inicio del trabajo no se tenía claro los datos a utilizar, dificultando la obtención de curvas correctas. Esto debido a que la lista des las detecciones manejada por ALeRCE cuenta con múltiples features que podían estar o no corregidas, hecho que era desconocido en un comienzo (se tiene que trabajar con los corregidos).
+        
+        \item Al ir estimando los períodos de los objetos, ocurría que cuando existían observaciones nulas, estas se propagaban dentro de los métodos implementados por la librería P4J, lo cual daba un período final nulo. Esto se debía a un pequeño error en la asignación de variables al limpiar datos nulos dentro de la librería, el cual fue corregido eventualmente.
+        
+        \item Al ir realizando la inspección visual de la curvas dobladas, con el tiempo se notó que involucra un tiempo no menor debido a la gran cantidad de curvas por ver (100 objetos x 7 métodos x 5 N° muestras distintos x 6 clases = 21000 curvas), lo que además puede involucrar mayor tiempo en caso de tener errores imprevistos.
+        
+        \item A medida que se iban inspeccionando las curvas dobladas, se noto que existen muestras con un ruido considerablemente grande que desplazaban los límites de los gráficos. Este hecho era más evidente para las LPVs y en consecuencia, se decidió aplicar un filtro inicial al seleccionar los objetos de la base de datos.
+    \end{itemize}

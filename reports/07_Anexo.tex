@@ -1,0 +1,380 @@
+% ------------------------------------------------------------------------------
+% ANEXO
+% ------------------------------------------------------------------------------
+\clearpage
+\begin{anexo}
+
+\section{Criterios}
+    \subsection{Ok}
+    \label{an:ok}
+	\begin{multicols}{3}
+
+		% Párrafo 1
+		\insertimage[\label{img:okRRL}]{criterios/crit_ok-1.PNG}{scale=0.4}{Ejemplo de curva doblada correctamente para RRL.}  
+		
+		\insertimage[\label{img:okCeph}]{criterios/crit_ok-2.PNG}{scale=0.5}{Ejemplo de curva doblada correctamente para Cefeida.}  		
+		
+		\insertimage[\label{img:okLPV}]{criterios/crit_ok-3.PNG}{scale=0.5}{Ejemplo de curva doblada correctamente para LPV.}  		
+
+	\end{multicols}
+	
+	\begin{multicols}{2}
+		% Párrafo 2
+		\insertimage[\label{img:okDSCT}]{criterios/crit_ok-4.PNG}{scale=0.5}{Ejemplo de curva doblada correctamente para DSCT.}  
+		
+		\insertimage[\label{img:okEB}]{criterios/crit_ok-5.PNG}{scale=0.5}{Ejemplo de curva doblada correctamente para EB.}  
+	\end{multicols}
+	
+	\subsection{Multiply}
+	\label{an:mult}
+	\begin{multicols}{3}
+
+		% Párrafo 1
+		\insertimage[\label{img:multRRL}]{criterios/crit_mult-1.PNG}{scale=0.4}{Ejemplo de curva doblada con período múltiplo para RRL.}  
+		
+		\insertimage[\label{img:multCeph}]{criterios/crit_mult-2.PNG}{scale=0.5}{Ejemplo de curva doblada con período múltiplo para Cefeida.}  		
+		
+		\insertimage[\label{img:multLPV}]{criterios/crit_mult-3.PNG}{scale=0.5}{Ejemplo de curva doblada con período múltiplo para LPV.}  		
+
+	\end{multicols}
+	
+	\begin{multicols}{2}
+		% Párrafo 2
+		\insertimage[\label{img:multDSCT}]{criterios/crit_mult-4.PNG}{scale=0.5}{Ejemplo de curva doblada con período múltiplo para DSCT.}  
+		
+		\insertimage[\label{img:multEB}]{criterios/crit_mult-5.PNG}{scale=0.5}{Ejemplo de curva doblada con período múltiplo para EB.}  
+	\end{multicols}	
+	
+	
+	\subsection{Differs}
+	\label{an:differs}
+	\begin{multicols}{3}
+
+		% Párrafo 1
+		\insertimage[\label{img:wrongRRL}]{criterios/crit_wrong-1.PNG}{scale=0.4}{Ejemplo de curva doblada incorrectamente para RRL.}  
+		
+		\insertimage[\label{img:wrongCeph}]{criterios/crit_wrong-2.PNG}{scale=0.5}{Ejemplo de curva doblada incorrectamente para Cefeida.}  		
+		
+		\insertimage[\label{img:wrongLPV}]{criterios/crit_wrong-3.PNG}{scale=0.5}{Ejemplo de curva doblada incorrectamente para LPV.}  		
+
+	\end{multicols}
+	
+	\begin{multicols}{2}
+		% Párrafo 2
+		\insertimage[\label{img:wrongDSCT}]{criterios/crit_wrong-4.PNG}{scale=0.5}{Ejemplo de curva doblada incorrectamente para DSCT.}  
+		
+		\insertimage[\label{img:wrongEB}]{criterios/crit_wrong-5.PNG}{scale=0.5}{Ejemplo de curva doblada incorrectamente para EB.}  
+	\end{multicols}	
+	
+\newpage
+	\subsection{Half}
+	\label{an:half}
+	\begin{multicols}{2}
+
+		% Párrafo 1
+		\insertimage[\label{img:halfEB1}]{criterios/EB_half-1.PNG}{scale=0.5}{Ejemplo de curva doblada con la mitad del período para EB.}  
+		
+		\insertimage[\label{img:halfEB2}]{criterios/EB_half-2.PNG}{scale=0.5}{Ejemplo de curva doblada con la mitad del período para EB.}  		
+		
+		% Párrafo 2
+		\insertimage[\label{img:halfEB3}]{criterios/EB_half-3.PNG}{scale=0.5}{Ejemplo de curva doblada con la mitad del período para EB.}  
+		
+		\insertimage[\label{img:halfEB4}]{criterios/EB_half-4.PNG}{scale=0.5}{Ejemplo de curva doblada con la mitad del período para EB.}  
+	\end{multicols}		
+	
+	
+\newpage	
+\section{Desglose de resultados}
+
+    \subsection{Catálogo}
+    
+    \begin{table}
+        \centering
+        \caption{Resumen de resultados de catálogos por clase y fuente.}
+        \label{tab:catComplete}
+        \scalebox{.8}{%
+        \begin{tabular}{llrrrrr}
+            \toprule
+               & \textbf{source} &  \textbf{ASASSN} &  \textbf{CRTSnorth} &  \textbf{GAIADR2VS} &  \textbf{LINEAR} &  \textbf{CRTSsouth} \\
+            {} & \textbf{catalog} &         &            &            &         &            \\
+            \midrule
+            \textbf{RRL} & \textbf{Right} &      13 &         33 &       24.0 &      29 &        NaN \\
+               & \textbf{Multiply} &       1 &          0 &        0.0 &       0 &        NaN \\
+               \hline
+            \textbf{Ceph} & \textbf{Wrong} &       8 &          5 &        NaN &       1 &        NaN \\
+               & \textbf{Right} &      59 &         22 &        NaN &       1 &        NaN \\
+               & \textbf{Multiply} &       2 &          2 &        NaN &       0 &        NaN \\
+               \hline
+            \textbf{LPV} & \textbf{Wrong} &       0 &          2 &       14.0 &       1 &        NaN \\
+               & \textbf{Right} &      10 &          7 &       62.0 &       1 &        NaN \\
+               & \textbf{Multiply} &       0 &          0 &        3.0 &       0 &        NaN \\
+               \hline
+            \textbf{DSCT} & \textbf{Wrong} &       4 &          4 &        NaN &       3 &        NaN \\
+               & \textbf{Right} &      54 &         23 &        NaN &      12 &        NaN \\
+               \hline
+            \textbf{EB} & \textbf{Wrong} &       0 &          1 &        NaN &       0 &        0.0 \\
+               & \textbf{Right} &      23 &         70 &        NaN &       3 &        1.0 \\
+               & \textbf{Multiply} &       0 &          2 &        NaN &       0 &        0.0 \\
+            \bottomrule
+        \end{tabular}}
+    \end{table}
+    
+    
+    \subsection{RRL - Single band}
+    
+    
+\begin{table}
+\centering
+\caption{Resumen de resultados RRL single band.}
+\label{anexo:RRLsb}
+\scalebox{.48}{
+\begin{tabular}{lrrrrrrrrrrrrrrr}
+\toprule
+{} & \multicolumn{3}{l}{10 samples:} & \multicolumn{3}{l}{20 samples:} & \multicolumn{3}{l}{30 samples:} & \multicolumn{3}{l}{40 samples:} & \multicolumn{3}{l}{50 samples:} \\
+{} &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply \\
+\midrule
+\textbf{catalog} &        0.00 &  0.99 &     0.01 &        0.00 &  0.99 &     0.01 &        0.00 &  0.99 &     0.01 &        0.00 &  0.99 &     0.01 &        0.00 &  0.99 &     0.01 \\
+\textbf{LS\_g   } &        0.93 &  0.06 &     0.01 &        0.60 &  0.40 &     0.00 &        0.24 &  0.76 &     0.00 &        0.17 &  0.83 &     0.00 &        0.17 &  0.83 &     0.00 \\
+\textbf{LS\_r   } &        0.95 &  0.05 &     0.00 &        0.66 &  0.34 &     0.00 &        0.35 &  0.64 &     0.01 &        0.25 &  0.75 &     0.00 &        0.22 &  0.78 &     0.00 \\
+\textbf{LKSL\_g } &        1.00 &  0.00 &     0.00 &        0.62 &  0.36 &     0.02 &        0.33 &  0.61 &     0.06 &        0.17 &  0.70 &     0.13 &        0.12 &  0.70 &     0.18 \\
+\textbf{LKSL\_r } &        0.99 &  0.01 &     0.00 &        0.63 &  0.31 &     0.06 &        0.37 &  0.57 &     0.06 &        0.26 &  0.67 &     0.07 &        0.22 &  0.66 &     0.12 \\
+\textbf{PDM1\_g } &        1.00 &  0.00 &     0.00 &        0.81 &  0.15 &     0.04 &        0.39 &  0.50 &     0.11 &        0.21 &  0.62 &     0.17 &        0.13 &  0.69 &     0.18 \\
+\textbf{PDM1\_r } &        1.00 &  0.00 &     0.00 &        0.90 &  0.07 &     0.03 &        0.46 &  0.41 &     0.13 &        0.32 &  0.54 &     0.14 &        0.27 &  0.59 &     0.14 \\
+\textbf{MHAOV\_g} &        0.91 &  0.07 &     0.02 &        0.56 &  0.44 &     0.00 &        0.24 &  0.76 &     0.00 &        0.18 &  0.82 &     0.00 &        0.17 &  0.83 &     0.00 \\
+\textbf{MHAOV\_r} &        0.95 &  0.04 &     0.01 &        0.57 &  0.36 &     0.07 &        0.38 &  0.62 &     0.00 &        0.25 &  0.75 &     0.00 &        0.21 &  0.79 &     0.00 \\
+\textbf{QME\_g  } &        0.96 &  0.04 &     0.00 &        0.38 &  0.59 &     0.03 &        0.24 &  0.76 &     0.00 &        0.14 &  0.86 &     0.00 &        0.11 &  0.89 &     0.00 \\
+\textbf{QME\_r  } &        0.86 &  0.11 &     0.03 &        0.42 &  0.52 &     0.06 &        0.27 &  0.73 &     0.00 &        0.16 &  0.84 &     0.00 &        0.14 &  0.86 &     0.00 \\
+\textbf{QMICS\_g} &        0.95 &  0.04 &     0.01 &        0.44 &  0.53 &     0.03 &        0.23 &  0.76 &     0.01 &        0.13 &  0.86 &     0.01 &        0.13 &  0.87 &     0.00 \\
+\textbf{QMICS\_r} &        0.90 &  0.07 &     0.03 &        0.49 &  0.49 &     0.02 &        0.29 &  0.70 &     0.01 &        0.18 &  0.81 &     0.01 &        0.16 &  0.84 &     0.00 \\
+\textbf{QMIEU\_g} &        0.91 &  0.08 &     0.01 &        0.37 &  0.59 &     0.04 &        0.21 &  0.79 &     0.00 &        0.12 &  0.88 &     0.00 &        0.10 &  0.90 &     0.00 \\
+\textbf{QMIEU\_r} &        0.86 &  0.10 &     0.04 &        0.41 &  0.56 &     0.03 &        0.27 &  0.73 &     0.00 &        0.16 &  0.84 &     0.00 &        0.13 &  0.87 &     0.00 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+    \subsection{RRL - Multi band}
+    
+\begin{table}
+\centering
+\caption{Resumen de resultados RRL multiband}
+\label{RRLmb}
+\scalebox{.5}{
+\begin{tabular}{lrrrrrrrrrrrrrrr}
+\toprule
+{} & \multicolumn{3}{l}{10 samples:} & \multicolumn{3}{l}{20 samples:} & \multicolumn{3}{l}{30 samples:} & \multicolumn{3}{l}{40 samples:} & \multicolumn{3}{l}{50 samples:} \\
+{} &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply \\
+\midrule
+\textbf{catalog} &        0.00 &  0.99 &     0.01 &        0.00 &  0.99 &     0.01 &        0.00 &  0.99 &     0.01 &        0.00 &  0.99 &     0.01 &         0.0 &  0.99 &     0.01 \\
+\textbf{MHAOV\_g} &        0.73 &  0.27 &     0.00 &        0.24 &  0.75 &     0.01 &        0.15 &  0.85 &     0.00 &        0.09 &  0.91 &     0.00 &         0.1 &  0.90 &     0.00 \\
+\textbf{MHAOV\_r} &        0.74 &  0.26 &     0.00 &        0.24 &  0.75 &     0.01 &        0.15 &  0.85 &     0.00 &        0.09 &  0.91 &     0.00 &         0.1 &  0.90 &     0.00 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+    \subsection{Ceph - Single band}
+    
+\begin{table}
+\centering
+\caption{Resumen de resultados Ceph single band.}
+\label{anexo:Cephsb}
+\scalebox{.48}{
+\begin{tabular}{lrrrrrrrrrrrrrrr}
+\toprule
+{} & \multicolumn{3}{l}{10 samples:} & \multicolumn{3}{l}{20 samples:} & \multicolumn{3}{l}{30 samples:} & \multicolumn{3}{l}{40 samples:} & \multicolumn{3}{l}{50 samples:} \\
+{} &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply \\
+\midrule
+\textbf{catalog} &        0.14 &  0.82 &     0.04 &        0.14 &  0.84 &     0.02 &        0.14 &  0.84 &     0.02 &        0.14 &  0.84 &     0.02 &        0.14 &  0.84 &     0.02 \\
+\textbf{LS\_g   } &        0.76 &  0.22 &     0.02 &        0.25 &  0.74 &     0.01 &        0.18 &  0.79 &     0.03 &        0.11 &  0.89 &     0.00 &        0.08 &  0.92 &     0.00 \\
+\textbf{LS\_r   } &        0.77 &  0.21 &     0.02 &        0.44 &  0.54 &     0.02 &        0.23 &  0.74 &     0.03 &        0.20 &  0.80 &     0.00 &        0.12 &  0.88 &     0.00 \\
+\textbf{LKSL\_g } &        0.98 &  0.02 &     0.00 &        0.35 &  0.65 &     0.00 &        0.18 &  0.82 &     0.00 &        0.10 &  0.88 &     0.02 &        0.06 &  0.92 &     0.02 \\
+\textbf{LKSL\_r } &        0.97 &  0.03 &     0.00 &        0.47 &  0.52 &     0.01 &        0.19 &  0.79 &     0.02 &        0.10 &  0.87 &     0.03 &        0.05 &  0.91 &     0.04 \\
+\textbf{PDM1\_g } &        0.99 &  0.01 &     0.00 &        0.50 &  0.46 &     0.04 &        0.17 &  0.78 &     0.05 &        0.08 &  0.87 &     0.05 &        0.06 &  0.93 &     0.01 \\
+\textbf{PDM1\_r } &        0.99 &  0.00 &     0.01 &        0.67 &  0.28 &     0.05 &        0.15 &  0.77 &     0.08 &        0.10 &  0.84 &     0.06 &        0.06 &  0.87 &     0.07 \\
+\textbf{MHAOV\_g} &        0.77 &  0.23 &     0.00 &        0.24 &  0.74 &     0.02 &        0.19 &  0.81 &     0.00 &        0.12 &  0.88 &     0.00 &        0.08 &  0.92 &     0.00 \\
+\textbf{MHAOV\_r} &        0.79 &  0.20 &     0.01 &        0.45 &  0.54 &     0.01 &        0.25 &  0.75 &     0.00 &        0.17 &  0.83 &     0.00 &        0.15 &  0.85 &     0.00 \\
+\textbf{QME\_g  } &        0.79 &  0.21 &     0.00 &        0.28 &  0.72 &     0.00 &        0.15 &  0.84 &     0.01 &        0.09 &  0.90 &     0.01 &        0.08 &  0.92 &     0.00 \\
+\textbf{QME\_r  } &        0.86 &  0.10 &     0.04 &        0.33 &  0.66 &     0.01 &        0.12 &  0.86 &     0.02 &        0.10 &  0.88 &     0.02 &        0.08 &  0.90 &     0.02 \\
+\textbf{QMICS\_g} &        0.87 &  0.12 &     0.01 &        0.38 &  0.61 &     0.01 &        0.24 &  0.75 &     0.01 &        0.10 &  0.90 &     0.00 &        0.08 &  0.92 &     0.00 \\
+\textbf{QMICS\_r} &        0.91 &  0.08 &     0.01 &        0.50 &  0.49 &     0.01 &        0.24 &  0.73 &     0.03 &        0.17 &  0.82 &     0.01 &        0.13 &  0.85 &     0.02 \\
+\textbf{QMIEU\_g} &        0.81 &  0.18 &     0.01 &        0.36 &  0.64 &     0.00 &        0.16 &  0.83 &     0.01 &        0.08 &  0.92 &     0.00 &        0.07 &  0.93 &     0.00 \\
+\textbf{QMIEU\_r} &        0.89 &  0.10 &     0.01 &        0.44 &  0.55 &     0.01 &        0.21 &  0.76 &     0.03 &        0.12 &  0.86 &     0.02 &        0.08 &  0.89 &     0.03 \\
+\bottomrule
+\end{tabular}}
+\end{table}    
+    
+    \subsection{Ceph - Multi band}
+    
+\begin{table}
+\centering
+\caption{Resumen de resultados Ceph multi band.}
+\label{anexo:Cephmb}
+\scalebox{.5}{
+\begin{tabular}{lrrrrrrrrrrrrrrr}
+\toprule
+{} & \multicolumn{3}{l}{10 samples:} & \multicolumn{3}{l}{20 samples:} & \multicolumn{3}{l}{30 samples:} & \multicolumn{3}{l}{40 samples:} & \multicolumn{3}{l}{50 samples:} \\
+{} &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply \\
+\midrule
+\textbf{catalog} &        0.14 &  0.82 &     0.04 &        0.14 &  0.82 &     0.04 &        0.14 &  0.82 &     0.04 &        0.14 &  0.82 &     0.04 &        0.14 &  0.82 &     0.04 \\
+\textbf{MHAOV\_g} &        0.39 &  0.59 &     0.02 &        0.14 &  0.86 &     0.00 &        0.12 &  0.88 &     0.00 &        0.08 &  0.92 &     0.00 &        0.04 &  0.96 &     0.00 \\
+\textbf{MHAOV\_r} &        0.39 &  0.59 &     0.02 &        0.14 &  0.86 &     0.00 &        0.12 &  0.88 &     0.00 &        0.08 &  0.92 &     0.00 &        0.04 &  0.96 &     0.00 \\
+\bottomrule
+\end{tabular}}
+\end{table}    
+    
+    \subsection{LPV - Single band}
+
+\begin{table}
+\centering
+\caption{Resumen de resultados LPV single band.}
+\label{anexo:LPVsb}
+\scalebox{.48}{
+\begin{tabular}{lrrrrrrrrrrrrrrr}
+\toprule
+{} & \multicolumn{3}{l}{10 samples:} & \multicolumn{3}{l}{20 samples:} & \multicolumn{3}{l}{30 samples:} & \multicolumn{3}{l}{40 samples:} & \multicolumn{3}{l}{50 samples:} \\
+{} &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply \\
+\midrule
+\textbf{catalog} &        0.17 &  0.80 &     0.03 &        0.17 &  0.80 &     0.03 &        0.17 &  0.80 &     0.03 &        0.17 &  0.79 &     0.04 &        0.17 &  0.79 &     0.04 \\
+\textbf{LS\_g   } &        0.69 &  0.25 &     0.06 &        0.44 &  0.50 &     0.06 &        0.38 &  0.55 &     0.07 &        0.31 &  0.59 &     0.10 &        0.26 &  0.67 &     0.07 \\
+\textbf{LS\_r   } &        0.62 &  0.35 &     0.03 &        0.39 &  0.60 &     0.01 &        0.32 &  0.65 &     0.03 &        0.27 &  0.71 &     0.02 &        0.24 &  0.74 &     0.02 \\
+\textbf{LKSL\_g } &        0.97 &  0.03 &     0.00 &        0.60 &  0.34 &     0.06 &        0.29 &  0.55 &     0.16 &        0.24 &  0.58 &     0.18 &        0.16 &  0.56 &     0.28 \\
+\textbf{LKSL\_r } &        0.96 &  0.04 &     0.00 &        0.47 &  0.45 &     0.08 &        0.36 &  0.52 &     0.12 &        0.23 &  0.65 &     0.12 &        0.11 &  0.69 &     0.20 \\
+\textbf{PDM1\_g } &        0.85 &  0.07 &     0.08 &        0.56 &  0.23 &     0.21 &        0.22 &  0.45 &     0.33 &        0.17 &  0.56 &     0.27 &        0.13 &  0.58 &     0.29 \\
+\textbf{PDM1\_r } &        0.88 &  0.06 &     0.06 &        0.57 &  0.27 &     0.16 &        0.22 &  0.62 &     0.16 &        0.16 &  0.71 &     0.13 &        0.10 &  0.74 &     0.16 \\
+\textbf{MHAOV\_g} &        0.65 &  0.30 &     0.05 &        0.39 &  0.55 &     0.06 &        0.28 &  0.63 &     0.09 &        0.24 &  0.63 &     0.13 &        0.22 &  0.70 &     0.08 \\
+\textbf{MHAOV\_r} &        0.63 &  0.35 &     0.02 &        0.36 &  0.62 &     0.02 &        0.30 &  0.66 &     0.04 &        0.23 &  0.73 &     0.04 &        0.23 &  0.75 &     0.02 \\
+\textbf{QME\_g  } &        0.96 &  0.03 &     0.01 &        0.61 &  0.25 &     0.14 &        0.42 &  0.43 &     0.15 &        0.34 &  0.42 &     0.24 &        0.28 &  0.47 &     0.25 \\
+\textbf{QME\_r  } &        0.93 &  0.06 &     0.01 &        0.59 &  0.27 &     0.14 &        0.49 &  0.29 &     0.22 &        0.42 &  0.36 &     0.22 &        0.40 &  0.36 &     0.24 \\
+\textbf{QMICS\_g} &        0.97 &  0.01 &     0.02 &        0.82 &  0.11 &     0.07 &        0.56 &  0.26 &     0.18 &        0.49 &  0.30 &     0.21 &        0.44 &  0.31 &     0.25 \\
+\textbf{QMICS\_r} &        0.99 &  0.00 &     0.01 &        0.78 &  0.11 &     0.11 &        0.65 &  0.17 &     0.18 &        0.54 &  0.26 &     0.20 &        0.52 &  0.25 &     0.23 \\
+\textbf{QMIEU\_g} &        0.91 &  0.04 &     0.05 &        0.65 &  0.22 &     0.13 &        0.40 &  0.42 &     0.18 &        0.33 &  0.44 &     0.23 &        0.32 &  0.51 &     0.17 \\
+\textbf{QMIEU\_r} &        0.95 &  0.04 &     0.01 &        0.66 &  0.21 &     0.13 &        0.42 &  0.33 &     0.25 &        0.38 &  0.40 &     0.22 &        0.38 &  0.41 &     0.21 \\
+\bottomrule
+\end{tabular}}
+\end{table}    
+    
+    
+    \subsection{LPV - Multi band}
+\begin{table}
+\centering
+\caption{Resumen de resultados LPV multi band.}
+\label{anexo:LPVmb}
+\scalebox{.5}{
+\begin{tabular}{lrrrrrrrrrrrrrrr}
+\toprule
+{} & \multicolumn{3}{l}{10 samples:} & \multicolumn{3}{l}{20 samples:} & \multicolumn{3}{l}{30 samples:} & \multicolumn{3}{l}{40 samples:} & \multicolumn{3}{l}{50 samples:} \\
+{} &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply \\
+\midrule
+\textbf{catalog} &        0.17 &  0.80 &     0.03 &        0.17 &  0.80 &     0.03 &        0.17 &  0.80 &     0.03 &        0.17 &  0.80 &     0.03 &        0.17 &  0.80 &     0.03 \\
+\textbf{MHAOV\_g} &        0.42 &  0.53 &     0.05 &        0.21 &  0.77 &     0.02 &        0.19 &  0.81 &     0.00 &        0.20 &  0.77 &     0.03 &        0.20 &  0.79 &     0.01 \\
+\textbf{MHAOV\_r} &        0.42 &  0.53 &     0.05 &        0.22 &  0.76 &     0.02 &        0.19 &  0.81 &     0.00 &        0.20 &  0.77 &     0.03 &        0.20 &  0.79 &     0.01 \\
+\bottomrule
+\end{tabular}}
+\end{table}    
+    
+    
+    \subsection{DSCT - Single band}
+    
+\begin{table}
+\centering
+\caption{Resumen de resultados DSCT single band.}
+\label{anexo:DSCTsb}
+\scalebox{.48}{
+\begin{tabular}{lrrrrrrrrrrrrrrr}
+\toprule
+{} & \multicolumn{3}{l}{10 samples:} & \multicolumn{3}{l}{20 samples:} & \multicolumn{3}{l}{30 samples:} & \multicolumn{3}{l}{40 samples:} & \multicolumn{3}{l}{50 samples:} \\
+{} &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply \\
+\midrule
+\textbf{catalog} &        0.11 &  0.89 &      0.0 &        0.11 &  0.89 &     0.00 &        0.11 &  0.89 &     0.00 &        0.11 &  0.89 &     0.00 &        0.11 &  0.89 &     0.00 \\
+\textbf{LS\_g   } &        0.98 &  0.02 &      0.0 &        0.84 &  0.16 &     0.00 &        0.72 &  0.28 &     0.00 &        0.67 &  0.33 &     0.00 &        0.59 &  0.41 &     0.00 \\
+\textbf{LS\_r   } &        1.00 &  0.00 &      0.0 &        0.87 &  0.13 &     0.00 &        0.72 &  0.28 &     0.00 &        0.68 &  0.32 &     0.00 &        0.54 &  0.45 &     0.01 \\
+\textbf{LKSL\_g } &        0.99 &  0.01 &      0.0 &        0.92 &  0.08 &     0.00 &        0.74 &  0.17 &     0.09 &        0.61 &  0.18 &     0.21 &        0.46 &  0.18 &     0.36 \\
+\textbf{LKSL\_r } &        1.00 &  0.00 &      0.0 &        0.89 &  0.11 &     0.00 &        0.81 &  0.16 &     0.03 &        0.71 &  0.15 &     0.14 &        0.55 &  0.20 &     0.25 \\
+\textbf{PDM1\_g } &        1.00 &  0.00 &      0.0 &        0.98 &  0.01 &     0.01 &        0.82 &  0.14 &     0.04 &        0.60 &  0.19 &     0.21 &        0.55 &  0.22 &     0.23 \\
+\textbf{PDM1\_r } &        0.99 &  0.01 &      0.0 &        0.99 &  0.00 &     0.01 &        0.80 &  0.14 &     0.06 &        0.74 &  0.15 &     0.11 &        0.56 &  0.23 &     0.21 \\
+\textbf{MHAOV\_g} &        0.98 &  0.02 &      0.0 &        0.81 &  0.19 &     0.00 &        0.74 &  0.26 &     0.00 &        0.68 &  0.32 &     0.00 &        0.50 &  0.50 &     0.00 \\
+\textbf{MHAOV\_r} &        1.00 &  0.00 &      0.0 &        0.84 &  0.16 &     0.00 &        0.78 &  0.22 &     0.00 &        0.70 &  0.30 &     0.00 &        0.51 &  0.49 &     0.00 \\
+\textbf{QME\_g  } &        0.98 &  0.02 &      0.0 &        0.76 &  0.22 &     0.02 &        0.66 &  0.34 &     0.00 &        0.55 &  0.43 &     0.02 &        0.36 &  0.62 &     0.02 \\
+\textbf{QME\_r  } &        0.98 &  0.02 &      0.0 &        0.77 &  0.23 &     0.00 &        0.70 &  0.30 &     0.00 &        0.57 &  0.43 &     0.00 &        0.40 &  0.58 &     0.02 \\
+\textbf{QMICS\_g} &        0.99 &  0.01 &      0.0 &        0.86 &  0.13 &     0.01 &        0.75 &  0.24 &     0.01 &        0.56 &  0.42 &     0.02 &        0.45 &  0.53 &     0.02 \\
+\textbf{QMICS\_r} &        1.00 &  0.00 &      0.0 &        0.84 &  0.16 &     0.00 &        0.71 &  0.29 &     0.00 &        0.56 &  0.44 &     0.00 &        0.40 &  0.60 &     0.00 \\
+\textbf{QMIEU\_g} &        1.00 &  0.00 &      0.0 &        0.83 &  0.16 &     0.01 &        0.69 &  0.30 &     0.01 &        0.54 &  0.46 &     0.00 &        0.37 &  0.60 &     0.03 \\
+\textbf{QMIEU\_r} &        0.99 &  0.01 &      0.0 &        0.79 &  0.21 &     0.00 &        0.70 &  0.30 &     0.00 &        0.58 &  0.42 &     0.00 &        0.42 &  0.58 &     0.00 \\
+\bottomrule
+\end{tabular}}
+\end{table}    
+    
+    
+    \subsection{DSCT - Multi band}
+    
+\begin{table}
+\centering
+\caption{Resumen de resultados DSCT multi band.}
+\label{anexo:DSCTmb}
+\scalebox{.5}{
+\begin{tabular}{lrrrrrrrrrrrrrrr}
+\toprule
+{} & \multicolumn{3}{l}{10 samples:} & \multicolumn{3}{l}{20 samples:} & \multicolumn{3}{l}{30 samples:} & \multicolumn{3}{l}{40 samples:} & \multicolumn{3}{l}{50 samples:} \\
+{} &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply &     Differs &    Ok & Multiply \\
+\midrule
+\textbf{catalog} &        0.11 &  0.89 &      0.0 &        0.11 &  0.89 &      0.0 &        0.11 &  0.89 &      0.0 &        0.11 &  0.89 &      0.0 &        0.11 &  0.89 &      0.0 \\
+\textbf{MHAOV\_g} &        0.88 &  0.12 &      0.0 &        0.67 &  0.33 &      0.0 &        0.52 &  0.48 &      0.0 &        0.50 &  0.50 &      0.0 &        0.46 &  0.54 &      0.0 \\
+\textbf{MHAOV\_r} &        0.88 &  0.12 &      0.0 &        0.67 &  0.33 &      0.0 &        0.52 &  0.48 &      0.0 &        0.49 &  0.51 &      0.0 &        0.46 &  0.54 &      0.0 \\
+\bottomrule
+\end{tabular}}
+\end{table}    
+    
+    
+    \subsection{EB - Single band}
+    
+\begin{table}
+\centering
+\caption{Resumen de resultados EB single band.}
+\label{anexo:EBsb}
+\scalebox{.4}{
+\begin{tabular}{lrrrrrrrrrrrrrrrrrrrr}
+\toprule
+{} & \multicolumn{4}{l}{10 samples:} & \multicolumn{4}{l}{20 samples:} & \multicolumn{4}{l}{30 samples:} & \multicolumn{4}{l}{40 samples:} & \multicolumn{4}{l}{50 samples:} \\
+{} &     Differs &    Ok &  Half & Multiply &     Differs &    Ok &  Half & Multiply &     Differs &    Ok &  Half & Multiply &     Differs &    Ok &  Half & Multiply &     Differs &    Ok &  Half & Multiply \\
+\midrule
+\textbf{catalog} &        0.01 &  0.97 &  0.02 &      0.0 &        0.01 &  0.97 &  0.02 &     0.00 &        0.01 &  0.97 &  0.02 &     0.00 &        0.01 &  0.97 &  0.02 &     0.00 &        0.01 &  0.97 &  0.02 &     0.00 \\
+\textbf{LS\_g   } &        0.89 &  0.00 &  0.11 &      0.0 &        0.64 &  0.02 &  0.34 &     0.00 &        0.61 &  0.02 &  0.37 &     0.00 &        0.56 &  0.02 &  0.42 &     0.00 &        0.50 &  0.02 &  0.48 &     0.00 \\
+\textbf{LS\_r   } &        0.87 &  0.02 &  0.11 &      0.0 &        0.66 &  0.01 &  0.33 &     0.00 &        0.57 &  0.01 &  0.42 &     0.00 &        0.55 &  0.01 &  0.44 &     0.00 &        0.51 &  0.01 &  0.48 &     0.00 \\
+\textbf{LKSL\_g } &        0.98 &  0.00 &  0.02 &      0.0 &        0.78 &  0.01 &  0.21 &     0.00 &        0.55 &  0.13 &  0.27 &     0.05 &        0.36 &  0.29 &  0.29 &     0.06 &        0.30 &  0.31 &  0.30 &     0.09 \\
+\textbf{LKSL\_r } &        1.00 &  0.00 &  0.00 &      0.0 &        0.83 &  0.01 &  0.16 &     0.00 &        0.62 &  0.10 &  0.28 &     0.00 &        0.43 &  0.21 &  0.29 &     0.07 &        0.26 &  0.29 &  0.36 &     0.09 \\
+\textbf{PDM1\_g } &        1.00 &  0.00 &  0.00 &      0.0 &        0.97 &  0.01 &  0.02 &     0.00 &        0.52 &  0.19 &  0.24 &     0.05 &        0.37 &  0.21 &  0.33 &     0.09 &        0.31 &  0.26 &  0.35 &     0.08 \\
+\textbf{PDM1\_r } &        1.00 &  0.00 &  0.00 &      0.0 &        0.91 &  0.02 &  0.07 &     0.00 &        0.62 &  0.08 &  0.24 &     0.06 &        0.46 &  0.17 &  0.33 &     0.04 &        0.32 &  0.24 &  0.37 &     0.07 \\
+\textbf{MHAOV\_g} &        0.89 &  0.00 &  0.11 &      0.0 &        0.61 &  0.02 &  0.37 &     0.00 &        0.61 &  0.02 &  0.37 &     0.00 &        0.56 &  0.02 &  0.41 &     0.01 &        0.49 &  0.03 &  0.47 &     0.01 \\
+\textbf{MHAOV\_r} &        0.90 &  0.01 &  0.09 &      0.0 &        0.61 &  0.01 &  0.38 &     0.00 &        0.59 &  0.01 &  0.40 &     0.00 &        0.56 &  0.01 &  0.43 &     0.00 &        0.51 &  0.01 &  0.47 &     0.01 \\
+\textbf{QME\_g  } &        0.95 &  0.00 &  0.05 &      0.0 &        0.67 &  0.01 &  0.32 &     0.00 &        0.60 &  0.03 &  0.37 &     0.00 &        0.53 &  0.02 &  0.45 &     0.00 &        0.44 &  0.02 &  0.54 &     0.00 \\
+\textbf{QME\_r  } &        0.91 &  0.01 &  0.08 &      0.0 &        0.69 &  0.02 &  0.29 &     0.00 &        0.62 &  0.04 &  0.34 &     0.00 &        0.53 &  0.04 &  0.43 &     0.00 &        0.48 &  0.02 &  0.50 &     0.00 \\
+\textbf{QMICS\_g} &        0.97 &  0.00 &  0.03 &      0.0 &        0.76 &  0.02 &  0.22 &     0.00 &        0.62 &  0.02 &  0.36 &     0.00 &        0.54 &  0.05 &  0.41 &     0.00 &        0.52 &  0.03 &  0.45 &     0.00 \\
+\textbf{QMICS\_r} &        0.98 &  0.00 &  0.02 &      0.0 &        0.76 &  0.01 &  0.23 &     0.00 &        0.61 &  0.02 &  0.37 &     0.00 &        0.55 &  0.06 &  0.39 &     0.00 &        0.55 &  0.03 &  0.42 &     0.00 \\
+\textbf{QMIEU\_g} &        0.93 &  0.00 &  0.07 &      0.0 &        0.72 &  0.02 &  0.26 &     0.00 &        0.60 &  0.03 &  0.37 &     0.00 &        0.53 &  0.04 &  0.43 &     0.00 &        0.50 &  0.02 &  0.48 &     0.00 \\
+\textbf{QMIEU\_r} &        0.92 &  0.00 &  0.08 &      0.0 &        0.72 &  0.01 &  0.26 &     0.01 &        0.59 &  0.03 &  0.38 &     0.00 &        0.49 &  0.06 &  0.45 &     0.00 &        0.52 &  0.01 &  0.47 &     0.00 \\
+\bottomrule
+\end{tabular}}
+\end{table}    
+    
+    
+    \subsection{EB - Multi band}
+
+\begin{table}
+\centering
+\caption{Resumen de resultados EB multi band.}
+\label{anexo:EBmb}
+\scalebox{.5}{
+\begin{tabular}{lrrrrrrrrrrrrrrrrrrrr}
+\toprule
+{} & \multicolumn{4}{l}{10 samples:} & \multicolumn{4}{l}{20 samples:} & \multicolumn{4}{l}{30 samples:} & \multicolumn{4}{l}{40 samples:} & \multicolumn{4}{l}{50 samples:} \\
+{} &     Differs &    Ok &  Half & Multiply &     Differs &    Ok &  Half & Multiply &     Differs &    Ok &  Half & Multiply &     Differs &    Ok &  Half & Multiply &     Differs &    Ok &  Half & Multiply \\
+\midrule
+\textbf{catalog} &        0.01 &  0.97 &  0.02 &      0.0 &        0.01 &  0.97 &  0.02 &      0.0 &        0.01 &  0.97 &  0.02 &      0.0 &        0.01 &  0.97 &  0.02 &      0.0 &        0.01 &  0.97 &  0.02 &      0.0 \\
+\textbf{MHAOV\_g} &        0.71 &  0.02 &  0.27 &      0.0 &        0.55 &  0.02 &  0.43 &      0.0 &        0.47 &  0.02 &  0.51 &      0.0 &        0.48 &  0.02 &  0.50 &      0.0 &        0.42 &  0.02 &  0.56 &      0.0 \\
+\textbf{MHAOV\_r} &        0.71 &  0.02 &  0.27 &      0.0 &        0.55 &  0.02 &  0.43 &      0.0 &        0.47 &  0.02 &  0.51 &      0.0 &        0.48 &  0.02 &  0.50 &      0.0 &        0.42 &  0.02 &  0.56 &      0.0 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+\end{anexo}

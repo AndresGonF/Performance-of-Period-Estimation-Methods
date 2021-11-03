@@ -1,0 +1,12 @@
+\section{Conclusiones y trabajo a futuro}
+
+    \begin{itemize}
+        \item Respecto a los resultados obtenidos con los catálogos, se puede decir que son una buena referencia de comparación con un hit-rate de al menos 0.80 para todas las clases. A futuro podría ser interesante hacer el mismo estudio con otros tipos de catálogos para comparar las fuentes y analizar como cambian los porcentajes de acierto.
+        \item Es evidente que no todas las clases tienen el mismo desempeño en general. De mejor a peor con 50 muestras se tiene Ceph, RRL, LPV, DSCT, y EB. Luego, viendo cada caso en particular en las clases, se tiene que algunos métodos son mejor aplicables para algunas clases, por lo que para mejorar el desempeño general, una combinación de los métodos a utilizar dependiendo del caso podría ser útil y en ese sentido puede ayudar identificar las fallas específicas de los métodos y también las características de los objetos que fallan con determinados métodos.
+        \item Los períodos con LKSL y PDM1 resultan en múltiplos en mayor cantidad. Esto resulta ser beneficioso para EBs y LPVs, y se debe a que en general estos métodos se enfocan más en la forma de las curvas.
+        \item El método de LS y MHAOV son bastante parecidos entre sí en términos de hit-rate. Sin embargo, si se toma en cuenta el tiempo de cómputo, el método MHAOB termina siendo mejor.
+        \item El tiempo de cómputo depende netamente de la complejidad del algoritmo y no varía mayormente entre clases.
+        
+        \item Queda pendiente aplicar el análisis con multibandas faltantes (LKSL, PDM1, métodos cuadráti-cos).
+        
+    \end{itemize}
