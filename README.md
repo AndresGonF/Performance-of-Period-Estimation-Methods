@@ -10,9 +10,18 @@ PPEM is a project for a guided work from Universidad de Chile. The main focus of
 Contents
 --------
 
--  Quadratic Mutual Information periodogram for light curves 
--  Phase Dispersion Minimization, String Length, and Analysis of variance periodograms.
--  Basic synthetic light curve generator
+1. Introduction
+2. Work methodology\
+    2.1. Database\
+    2.2. Object selection\
+    2.3. Period estimation\
+    2.4. Folde curve scoring
+3. Analysis and resultsResultados y análisis
+    3.1. Catálogo\
+    3.2. Hit-rate\
+    3.3. Computing time
+4. Difficulties
+5. Conclusions and future work
 
 Instalation
 -----------
